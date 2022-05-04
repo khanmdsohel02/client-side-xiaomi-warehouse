@@ -16,3 +16,48 @@ span{
     justify-content: center;
     margin-top: 40px;
 }
+.count{
+    background-image: url("https://i.ibb.co/MD7NLmQ/bg.png");
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    align-items: center;
+    justify-content: center;
+   margin: 20px 20px;
+    margin-bottom: 50px;
+}
+.counter{
+    text-align: center;
+   padding: 60px 10px;
+   color: rgb(120, 84, 71);
+}
+ .review-bg{
+width: 50%;
+margin: auto;
+} 
+.reviews{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+text-align: center;
+padding: 2rem;
+width: 50%;
+}
+.dealer-img img{
+    margin-bottom: 25px;
+   border-radius: 50%;
+}
+.reviews h3{
+      color:rgb(126, 78, 44);
+}
+.reviews p, small {
+    font-size: 25px;
+    margin: 25px 0px;
+    text-align: center;
+    color: rgb(126, 78, 44);
+}
+.swiper-pagination-clickable .swiper-pagination-bullet{
+    background-color:coral ;
+   padding: 5px;
+}
+
