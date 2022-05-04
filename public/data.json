@@ -1,7 +1,7 @@
 [
     {
         "id": "phon",
-        "img": "https://i.ibb.co/ZGpPwQM/ph1.jpg",
+        "img": "https://i.ibb.co/9G0MNzk/ph1-removebg-preview-1.png",
         "name": "Xiaomi 12 Pro Full Specifications",
         "price": "89999 (8/256)",
         "quantity": "975",
@@ -10,7 +10,7 @@
     },
     {
         "id": "tv",
-        "img": "https://i.ibb.co/rwpcMr0/tv1.jpg",
+        "img": "https://i.ibb.co/sQ1PGFH/tv1-removebg-preview.png",
         "name": "Xiaomi Mi P1 L32M6-6ARG/6AEU 32-Inch Smart Android HD TV with Netflix (Global Version)",
         "price": 25000 ,
         "quantity": 700,
@@ -19,7 +19,7 @@
     },
     {
         "id": "watch",
-        "img": "https://i.ibb.co/3zNkZr3/watch1.jpg",
+        "img": "https://i.ibb.co/hCdKrnS/watch1-removebg-preview.png",
         "name": "Xiaomi Haylou LS02 Touch Screen Square Shape Smart Watch Black",
         "price": 1800,
         "quantity": 5000,
@@ -28,7 +28,7 @@
     },
     {
         "id": "speaker",
-        "img": "https://i.ibb.co/v1dcFH2/speaker1.jpg",
+        "img": "https://i.ibb.co/Nrtzrjx/speaker1-removebg-preview.png",
         "name": "Xiaomi Mi MDZ-28-DI Compact Mini Bluetooth Speaker 2 Global Version White",
         "price": 900,
         "quantity": 2500,
@@ -37,7 +37,7 @@
     },
     {
         "id": "router",
-        "img": "https://i.ibb.co/J5rhQpD/router1.jpg",
+        "img": "https://i.ibb.co/9nqWHk9/router1-removebg-preview.png",
         "name": "Xiaomi MI 4C R4CM 300 Mbps 4 Antenna Router (Global Version)",
         "price": 900,
         "quantity": 1570,
@@ -46,7 +46,7 @@
     },
     {
         "id": "cctv",
-        "img": "https://i.ibb.co/F8mvN8s/cctv1.jpg",
+        "img": "https://i.ibb.co/p40LSNZ/cctv1-removebg-preview.png",
         "name": "Xiaomi Mi MJSXJ10CM 360° Kamepa Home Wi-Fi Security Camera White",
         "price": 2900,
         "quantity": 1920,
