@@ -1,0 +1,11 @@
+.menu-items .item{
+    font-weight: 600;
+    font-size: 20px;
+    color:coral !important;
+    padding: 7px 12px !important;
+}
+.menu-items .item:hover{
+    background-color: chartreuse;
+    border-radius: 15px;
+ color: white !important;
+}

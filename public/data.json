@@ -1,0 +1,56 @@
+[
+    {
+        "id": "phon",
+        "img": "https://i.ibb.co/ZGpPwQM/ph1.jpg",
+        "name": "Xiaomi 12 Pro Full Specifications",
+        "price": "89999 (8/256)",
+        "quantity": "975",
+        "supplier": "Jhon",
+        "about": "Xiaomi 12 Pro comes with 6.73 inches Quad HD+ LTPO AMOLED screen. It has a Full-View center punch-hole design. The frontside is protected by a Gorilla Glass Victus. The back camera is of triple 50+50+50 MP with dual-Pixel PDAF, dual-LED flash, 115º ultrawide lens, telephoto camera, OIS, 2x optical zoom, 1/1.28″, 1.22µm, etc. and up to 8K video recording. The front camera is of 32 MP. Xiaomi 12 Pro comes with 4600 mAh battery with 120W Quick Charge 4+ fast charging and 50W Fast Wireless Charging options. It has 8 or 12 GB RAM, up to 3 GHz octa-core CPU and Adreno 730 GPU. It is powered by a Qualcomm Snapdragon 8 Gen 1 (4 nm) chipset. The device comes in 128 or 256 GB UFS 3.1 internal storage and no Memory Card slot. There is an optical in-display fingerprint sensor in this phone."
+    },
+    {
+        "id": "tv",
+        "img": "https://i.ibb.co/rwpcMr0/tv1.jpg",
+        "name": "Xiaomi Mi P1 L32M6-6ARG/6AEU 32-Inch Smart Android HD TV with Netflix (Global Version)",
+        "price": 25000 ,
+        "quantity": 700,
+        "supplier": "Smith",
+        "about": "The Xiaomi Mi P1 L32M6-6ARG Smart Android TV comes with a 32 Inch HD (1,366 x 768) display and epic views with a borderless design. HD resolution delivers true-to-life images with more detail and greater depth. It has a viewing angle of 178°(H)/178°(V). The Mi P1 features a MediaTek MT9611 processor. It is equipped with Quad CA53, up to 1.2GHz CPU, and Mali 470 MP3 GPU. It has 1.5GB RAM and 8GB of storage. It supports Dolby Vision that delivers brighter brights and darker darks by enhancing the sharpness, contrast, and color of images, while true-to-life levels of detail let you see more than ever before. It has two 10W stereo speakers that deliver a rich, clear, and layered cinematic audio experience from the comfort of your living room."
+    },
+    {
+        "id": "watch",
+        "img": "https://i.ibb.co/3zNkZr3/watch1.jpg",
+        "name": "Xiaomi Haylou LS02 Touch Screen Square Shape Smart Watch Black",
+        "price": 1800,
+        "quantity": 5000,
+        "supplier": "Rahul",
+        "about": "The new Haylou LS02 smartwatch differs from the previous model with a large 1.4-inch touch screen. The display resolution is 320x320 pixels. The screen is placed under a curved 2.5D tempered glass that is resistant to damage. The pixel density is 320ppi. Also, this smartwatch is characterized by long-term battery life. It works up to 20 days with 24-hour heart rate monitoring. The smartwatch is connected by Bluetooth 5.0. It significantly reduces power consumption and reduces the likelihood of losing communication between the smartwatch and the smartphone. The smartwatch case is thin and light with a comfortable breathing silicone strap. The Haylou LS02 smartwatch will be indispensable in sports. Twelve built-in sports modes will help you record and analyze all data, continually monitoring your heart rate. The Haylou LS02 smartwatch is protected against water and dust according to industry-standard IP67. Automatic sleep monitoring will help improve the quality of your sleep. You can receive all notifications from your smartphone right on your wrist. Calls, received messages, calendar events, application notifications - you will not miss anything important. Haylou LS02 enriches a variety of sports modes. "
+    },
+    {
+        "id": "speaker",
+        "img": "https://i.ibb.co/v1dcFH2/speaker1.jpg",
+        "name": "Xiaomi Mi MDZ-28-DI Compact Mini Bluetooth Speaker 2 Global Version White",
+        "price": 900,
+        "quantity": 2500,
+        "supplier": "Mario",
+        "about": "Depending on the higherdemand among the customers Star Tech introduces this small and light weight XiaomiMi Portable Bluetooth Speaker. This speaker has full metal casing, weighted 58g yet powerful enough to create perfect audio balance. Considering the designthis speaker has high-speed polishing, sandblasting, anodizing and highprecision CNC cutting for magnificent appearance. Regarding its structurematerials are quite durable and the shell is very robust and shock proof and designedin an elegant minimalist style using a seamless technology for excellent look.The new CSR Bluetooth 4.0 chip will provide longer listening with stable signal.Its CVC6.0 technology automatically selects the appropriate sound level dependingon the environment you are in."
+    },
+    {
+        "id": "router",
+        "img": "https://i.ibb.co/J5rhQpD/router1.jpg",
+        "name": "Xiaomi MI 4C R4CM 300 Mbps 4 Antenna Router (Global Version)",
+        "price": 900,
+        "quantity": 1570,
+        "supplier": "Marko",
+        "about": "Xiaomi MI 4c Router Transmission Rate 300Mbps With included 4 high gain antennas for strong signal, Support for single-band (2.4GHz) Wi-Fi 802.11 b/g/n along with 3x3 MIMO technology. Intelligent speed limit function for faster performance and network watching function for ensuring network security.Smart management function for remote control. It has also Qualcomm QC8561 processor. It also had 64MB of DDR2 RAM and 16MB of NorFlash storage. It Comes with 3 Month Warranty (Must Claim With Box & All Accessories)."
+    },
+    {
+        "id": "cctv",
+        "img": "https://i.ibb.co/F8mvN8s/cctv1.jpg",
+        "name": "Xiaomi Mi MJSXJ10CM 360° Kamepa Home Wi-Fi Security Camera White",
+        "price": 2900,
+        "quantity": 1920,
+        "supplier": "Singju",
+        "about": " It's low-light true colour technology allows you to see a full-color palette even in the later hours of the day, without reverting to infrared illumination that can only provide a black and white picture. Moreover, the F2.1 aperture allows more light intake, while the 8-bulb 940nm infrared illuminator increases visibility. Its smoother streaming and reduced bandwidth without compromising on detail is note worthy. Encoding is able to keep the same pixel count and bit rate while using half the storage of H.264 encoding and conveniently store videos. It supports Network Attached Storage (NAS). Network devices or routers with storage capabilities can be used to store files that are backed up from SD cards to NAS storage devices. Besides, check on your home from anywhere and fast forward recorded video at 2x/ 4x/ 16x speed, and talk to your family using the camera too. "
+    }
+]

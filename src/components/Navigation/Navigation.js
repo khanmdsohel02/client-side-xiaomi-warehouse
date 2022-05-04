@@ -1,35 +1,26 @@
 import React from 'react';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-
+import { Container, Nav, Navbar } from 'react-bootstrap';
+import "./Navigation.css"
+import {Link} from "react-router-dom";
 const Navigation = () => {
-    return (
-       <Navbar Navbar collapseOnSelect expand = "lg"
-       bg = "light"
-       variant = "light" >
+  return (
+      
+       <Navbar Navbar collapseOnSelect expand = "lg" className='bg-color'>
   <Container>
-  <Navbar.Brand href="#home">Xiaomi WareHouse</Navbar.Brand>
+          <Navbar.Brand as={Link}   to = "/" > < img src = {"https://i.ibb.co/fG4hsZK/logo.png"} alt = "Logo"/> </Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
-    <Nav className="me-auto">
-      <Nav.Link href="#features">Features</Nav.Link>
-      <Nav.Link href="#pricing">Pricing</Nav.Link>
-      <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-        <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-      </NavDropdown>
-    </Nav>
-    <Nav>
-      <Nav.Link href="#deets">More deets</Nav.Link>
-      <Nav.Link eventKey={2} href="#memes">
-        Dank memes
-      </Nav.Link>
-    </Nav>
+     <Nav className="mx-auto me-3 ps-5 menu-items">
+      <Nav.Link as={Link} to="/home" className='item  '>HOME</Nav.Link>
+      <Nav.Link as={Link} to="/contact" className='item  '>CONTACT US</Nav.Link>
+      <Nav.Link as={Link} to="/blog" className='item   '>MY BLOG</Nav.Link>
+      
+      <Nav.Link as={Link} to="/login" className='item  '>LOGIN</Nav.Link>
+    </Nav> 
   </Navbar.Collapse>
   </Container>
-</Navbar>
+    </Navbar>
+    
     );
 };
 
