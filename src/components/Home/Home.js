@@ -7,6 +7,7 @@ import {  Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import Footer from '../shered/Footer/Footer';
 
 const Home = () => {
     const [ products, setProducts ] = useState([]);
@@ -80,7 +81,7 @@ const Home = () => {
                     }
                 </Swiper>
             </div>
-            
+            <Footer/>
         </>
     );
 };

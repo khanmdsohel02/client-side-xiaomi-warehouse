@@ -1,9 +1,29 @@
 .footer{
+     background-color: chocolate;
     margin-top: 40px;
+    padding-bottom: 25px;
 }
 .footer1{
-
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px 0px;
+  
 }
-.footer2{
-
+h4 ,h6, p, a{
+    color: white;
+}
+.footer1 a{
+    list-style: none;
+    text-decoration: none;
+      color: white;
+}
+.footer1 a:hover{
+    border-bottom: 1px solid white;
+}
+.footer1 h6{
+padding-top: 10px;
+}
+.copy-right{
+text-align: center;
 }
