@@ -12,8 +12,8 @@ const Footer = () => {
                     <img src={"https://i.ibb.co/cwypqRg/methods.png"} alt=""/>
                 </div>
                 <div>
-               <a href="http://" target="_blank" rel="noopener noreferrer"> <li>About Us</li></a>
-                   <a href="http://" target="_blank" rel="noopener noreferrer"><li>Contact Us</li></a>
+               <Link to="/about" > <li>About Us</li></Link>
+                   <Link to="/contact"><li>Contact Us</li></Link>
                     <h6> Follow Us On Social Media </h6>
               <a  href = {"https://www.facebook.com/"} target="_blank" rel="noopener noreferrer"><li>FaceBook</li></a>
                 <a href={"https://twitter.com/"} target="_blank" rel="noopener noreferrer"><li>Twitter</li></a>
