@@ -1,0 +1,46 @@
+.login-form, .Signup-form{
+    width: 40%;
+    margin: 20px auto;
+       background-color: aliceblue;
+        border-radius: 15px;
+}
+.login-form h1, .Signup-form h1{
+    text-align: center;
+    margin-top: 70px;
+    padding-top: 20px;
+}
+form{
+    padding: 30px;
+    margin-top:20px ;
+}
+.login-form  h5, .Signup-form h5{
+     text-align: center;
+     padding-bottom: 20px;
+     color: coral;
+}
+.login-form h5 a, .Signup-form h5 a{
+    text-decoration: none;
+    color: chocolate;
+}
+.btn-color{
+    background-color: coral !important;
+    color: white !important;
+}
+.btn-color:hover, .social-btn button:hover{
+background-color: chocolate !important;
+}
+.social-btn {
+   text-align: center;
+}
+.social-btn button{
+margin-bottom: 30px;
+background-color:coral;
+padding: 10px 35px !important;
+}
+small{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:  20px;
+    font-size: 20px !important;
+}

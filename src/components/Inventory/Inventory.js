@@ -2,6 +2,7 @@ import React from 'react';
 import "./Inventory.css"
 import useInventoryItems from '../Hooks/InventoryItems/useInventoryItems';
 import InventoryItems from '../InventoryItems/InventoryItems';
+import Footer from '../shered/Footer/Footer';
 
 const Inventory = () => {
 
@@ -20,6 +21,7 @@ const Inventory = () => {
                         }
                 </div>
             </div>
+            <Footer/>
         </>
     );
 };
