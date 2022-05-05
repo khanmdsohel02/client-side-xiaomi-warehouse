@@ -22,7 +22,6 @@ const SignUp = () => {
             <form onSubmit={handleSignUp}>
   <div>
     <input type="text"name='name' placeholder='User Name'/>
-    <div id="emailHelp" className="form-text"></div>
   </div>
   <div>
               <input
@@ -30,10 +29,8 @@ const SignUp = () => {
                 name='email'
                 placeholder='Your Email'
                 onBlur={(event) => handleEmail(event.target.value)} />
-              <div id="emailHelp" className="form-text">
-         </div>
-            </div>
-            {email?.error && <p className='text-danger'>{email.error}</p> }
+     </div>
+            {email?.error && <p className='error-color'>{email.error}</p> }
             
   <div>
               <input
@@ -41,8 +38,8 @@ const SignUp = () => {
                 name='password'
                 placeholder="Password"
                 onBlur={(event) => handlePassword(event.target.value)} />
-            </div>
-            {password?.error && <p className='text-danger'>{password.error}</p> }
+ </div>
+            {password?.error && <p className='error-color'>{password.error}</p> }
   <div>
               <input
                 type="password"
@@ -50,8 +47,8 @@ const SignUp = () => {
                 placeholder=" 
                 Confirm Password"
                 onBlur = {(event) =>handleConfirmPassword(event.target.value)}/>
-            </div>
-             {confirmPassword?.error && <p className='text-danger'>{confirmPassword.error}</p> }
+   </div>
+             {confirmPassword?.error && <p className='error-color'>{confirmPassword.error}</p> }
 
   <button type="submit" className="btn btn-color">Register</button>
             </form>

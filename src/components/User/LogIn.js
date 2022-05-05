@@ -13,8 +13,13 @@ const LogIn = () => {
             <h1>Please LogIn</h1>
             <form form onSubmit = {handleLogIn}>
   <div className="mb-2">
+    < input type = "username"
+    name = 'email'
+    placeholder = 'User Name'
+    required />
+  </div>
+  <div className="mb-2">
     <input type="email" name='email' placeholder='Your Email' required/>
-    <div id="emailHelp" className="form-text"></div>
   </div>
   <div className="mb-2">
     <input type="password" name='password' placeholder="Password" required/>

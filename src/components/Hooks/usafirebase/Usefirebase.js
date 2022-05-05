@@ -42,8 +42,6 @@ const UseFirebase = () => {
        setConfirmPassword({value: "" ,error: "Password not match"})
     }
    
-
-    console.log(confirmPassword);
 }
 
   const from = location?.state?.from?.pathname || "/"
@@ -56,15 +54,15 @@ const UseFirebase = () => {
               navigate(from ,{replace: true})
             })
     }
-    const handleLogIn = (event) => {
+   const handleLogIn = (event) => {
         event.preventDefault();
           const email = event.target.email.value;
         const password = event.target.password.value;
         // console.log(email, password);
         
 signInWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-      const user = userCredential.user;
+  .then( result => {
+      const user = result.user;
       navigate(from ,{replace: true})
     // console.log(user);
   })
@@ -98,9 +96,9 @@ signInWithEmailAndPassword(auth, email, password)
 
       if (email.value && password.value && confirmPassword.value == password.value) {
          createUserWithEmailAndPassword(auth, email.value, password.value)
-  .then((userCredential) => {
-      const user = userCredential.user;
-    navigate("/")
+  .then( result => {
+      const user = result.user;
+     navigate(from ,{replace: true})
     toast.success("Successfull", { id: "success" });
       console.log(user);
   })

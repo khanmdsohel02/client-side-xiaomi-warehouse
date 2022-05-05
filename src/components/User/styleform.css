@@ -3,6 +3,7 @@
     margin: 20px auto;
        background-color: aliceblue;
         border-radius: 15px;
+        border: 2px solid coral;
 }
 .login-form h1, .Signup-form h1{
     text-align: center;
@@ -43,4 +44,7 @@ small{
     justify-content: center;
     margin-bottom:  20px;
     font-size: 20px !important;
+}
+.error-color{
+    color: cornflowerblue;
 }

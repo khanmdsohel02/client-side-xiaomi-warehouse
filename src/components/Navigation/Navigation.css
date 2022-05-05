@@ -3,14 +3,16 @@
     top: 0%;
     background-color: chocolate;
 }
-.menu-items .item{
+.menu-items .item, .user-name, .sign-out{
     font-weight: 600;
     font-size: 20px;
     color: white  !important;
     padding: 7px 12px !important;
 }
-.menu-items .item:hover{
+.menu-items .item:hover, .sign-out:hover{
     background-color: white;
     border-radius: 15px;
    color: chocolate !important;
 }
+
+

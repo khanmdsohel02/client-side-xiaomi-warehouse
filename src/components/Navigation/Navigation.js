@@ -1,8 +1,11 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import "./Navigation.css"
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import UseFirebase from '../Hooks/usafirebase/Usefirebase';
+
 const Navigation = () => {
+   const { user, handleSignOut } = UseFirebase();
   return (
       
        <Navbar collapseOnSelect expand = "lg" className='navigated'>
@@ -15,7 +18,13 @@ const Navigation = () => {
       <Nav.Link as={Link} to="/inventory" className='item  '>INVENTORY</Nav.Link>
       <Nav.Link as={Link} to="/blog" className='item   '>MY BLOG</Nav.Link>
       
-      <Nav.Link as={Link} to="/login" className='item  '>LOGIN</Nav.Link>
+        {
+                user?.uid?
+                <b className='sign-out' onClick={handleSignOut}>Sign Out</b>:
+                < Nav.Link as={Link} to="/login"
+                    className='item' > LOGIN </Nav.Link>
+              }
+                <span className='user-name'>{ user?.displayName && user.displayName} </span>
     </Nav> 
   </Navbar.Collapse>
   </Container>
