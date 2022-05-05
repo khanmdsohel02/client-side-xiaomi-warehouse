@@ -16,6 +16,20 @@ span{
     justify-content: center;
     margin-top: 40px;
 }
+.manage-inventories{
+display: flex;
+justify-content: center;
+margin: 20px 0px 50px 0px;
+}
+.manage-inventories button{
+  padding: 15px 20px !important;
+  font-size: 25px;
+  border-radius: 35px !important;
+}
+.items a{
+    text-decoration: none;
+}
+
 .count{
     background-image: url("https://i.ibb.co/MD7NLmQ/bg.png");
     display: grid;

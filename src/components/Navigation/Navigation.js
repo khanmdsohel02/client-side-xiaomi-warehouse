@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 const Navigation = () => {
   return (
       
-       <Navbar collapseOnSelect expand = "lg" className='navigate'>
+       <Navbar collapseOnSelect expand = "lg" className='navigated'>
   <Container>
           <Navbar.Brand as={Link}   to = "/" > < img src = {"https://i.ibb.co/fG4hsZK/logo.png"} alt = "Logo"/> </Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />

@@ -35,7 +35,8 @@ const Home = () => {
                             product={product}
                         />)
                         }
-            </div>
+                </div>
+               < Link to = "/manageinventories"  className='manage-inventories'> < button > Manage Inventories </button></Link >
             </div>
             <div className='count'>
                 <div className='counter'>

@@ -6,6 +6,7 @@ import MyBlog from "./components/MyBlog/MyBlog";
 import Login from "./components/Login/Login";
 import AboutUs from "./components/AboutUs/AboutUs"
 import Inventory from "./components/Inventory/Inventory";
+import ManageInventories from "./components/ManageInventories/ManageInventories";
 
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
         <Route path="/blog" element={<MyBlog/>} />
         <Route path="/login" element={<Login />} />
         <Route path="/about" element={<AboutUs/>} />
-         <Route path="/contact" element={<Contact/>} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/manageInventories" element={<ManageInventories/>} />
         <Route path="/home" element={<Home/>} />
         
 
