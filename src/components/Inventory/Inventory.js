@@ -1,11 +1,26 @@
 import React from 'react';
 import "./Inventory.css"
+import useInventoryItems from '../Hooks/InventoryItems/useInventoryItems';
+import InventoryItems from '../InventoryItems/InventoryItems';
 
 const Inventory = () => {
+
+    const [inventoryItems, setInventoryItems] = useInventoryItems();
+    
     return (
-        <div>
-            <h1>Inventory</h1>
-        </div>
+        <>
+            <div className='items'>
+                <h1> All<span> Inventory </span> Items</h1 >
+                <div className="inventory-items">
+                        {
+                        inventoryItems.map(inventoryItem => < InventoryItems
+                            key={inventoryItem._id}
+                            inventoryItem={inventoryItem}
+                        />)
+                        }
+                </div>
+            </div>
+        </>
     );
 };
 

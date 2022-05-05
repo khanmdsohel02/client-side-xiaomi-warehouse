@@ -21,6 +21,8 @@
     font-size: 20px;
     text-align: justify;
     font-weight: 500;
+    color: chocolate;
+    padding-top: 10px;
 }
 .update-btn{
     width: 100%;

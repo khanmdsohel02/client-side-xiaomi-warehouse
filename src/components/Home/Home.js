@@ -76,10 +76,7 @@ const Home = () => {
                                       <small>{ date}</small>
                                  </div>
                                 </SwiperSlide>
-                            )
-                        }
-                        )
-                    }
+                            ) } ) }
                 </Swiper>
             </div>
             <Footer/>
