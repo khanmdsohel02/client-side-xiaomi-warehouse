@@ -13,7 +13,7 @@ const LogIn = () => {
             <h1>Please LogIn</h1>
             <form form onSubmit = {handleLogIn}>
   <div className="mb-2">
-    < input type = "username"
+    < input type = "text"
     name = 'email'
     placeholder = 'User Name'
     required />

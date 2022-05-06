@@ -1,0 +1,23 @@
+.update-section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+.product-info{
+    padding-right: 20px;
+}
+.product-info h2 , strong{
+    padding-bottom: 10px;
+    color: chocolate;
+}
+.product-info h5, p{
+ padding: 5px 0px;
+ color:chocolate !important;
+}
+.product-info p{
+    text-align: justify;
+    font-size: 20px;
+}
