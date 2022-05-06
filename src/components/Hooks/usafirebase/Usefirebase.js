@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react"
-import {  createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import {  createUserWithEmailAndPassword, FacebookAuthProvider, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import auth from "../../../firebaseConfig";
 import { useLocation, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
 
 const googleProvider = new GoogleAuthProvider();
+const facebookProvider = new FacebookAuthProvider();
 
 const UseFirebase = () => {
 
@@ -46,6 +47,14 @@ const UseFirebase = () => {
 
   const from = location?.state?.from?.pathname || "/"
 
+  const signInWithFacebook = () => {
+      signInWithPopup(auth, facebookProvider)
+            .then(result => {
+                const user = result.user
+                setUser(user)
+              navigate(from ,{replace: true})
+            })
+    }
     const signInWithGoogle = () => {
         signInWithPopup(auth, googleProvider)
             .then(result => {
@@ -120,7 +129,8 @@ signInWithEmailAndPassword(auth, email, password)
     };
 
 return {
-    user,
+  user,
+  signInWithFacebook,
     signInWithGoogle,
     handleSignOut,
     handleSignUp,

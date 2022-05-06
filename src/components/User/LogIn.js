@@ -6,7 +6,7 @@ import UseFirebase from '../Hooks/usafirebase/Usefirebase';
 
 const LogIn = () => {
 
-  const { signInWithGoogle, handleLogIn } = UseFirebase();
+  const { signInWithGoogle, handleLogIn, signInWithFacebook } = UseFirebase();
     return (
       <div className="main-width">
         <div className="login-form">
@@ -32,6 +32,8 @@ const LogIn = () => {
           <small>-------------------- OR -------------------- </small>
       <div className = 'social-btn' >
             <button onClick={signInWithGoogle}>Continue With Google</button>
+            <button onClick={signInWithFacebook}>
+              Continue With FaceBook</button>
       </div>
         </div>
         <Footer/>

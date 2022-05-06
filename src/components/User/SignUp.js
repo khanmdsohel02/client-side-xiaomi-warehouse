@@ -5,6 +5,7 @@ import Footer from "../shered/Footer/Footer"
 
 const SignUp = () => {
   const {
+    signInWithFacebook,
     signInWithGoogle,
     handleSignUp,
     handleEmail, 
@@ -57,6 +58,7 @@ const SignUp = () => {
             <small>-------------------- OR -------------------- </small>
         <div className = 'social-btn' >
   <button  onClick={signInWithGoogle}>Continue With Google</button>
+  <button  onClick={signInWithFacebook}>Continue With FaceBook</button>
       </div>
         </div> 
         <Footer/>
