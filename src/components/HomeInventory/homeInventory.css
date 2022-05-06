@@ -24,7 +24,7 @@
     color: chocolate;
     padding-top: 10px;
 }
-.update-btn{
+.update-btn, .delete-btn{
     width: 100%;
     background-color: coral;
     color: white;

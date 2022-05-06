@@ -8,14 +8,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import Footer from '../shered/Footer/Footer';
+import useInventoryItems from '../Hooks/InventoryItems/useInventoryItems';
 
 const Home = () => {
-    const [ products, setProducts ] = useState([]);
-    useEffect(() => {
-        fetch("data.json")
-            .then(res => res.json())
-            .then(data => setProducts(data))
-    }, [])
+    const [inventoryItems, setInventoryItems] = useInventoryItems();
+    
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/review')
@@ -30,7 +27,7 @@ const Home = () => {
                 <h1><span> Inventory </span> Items</h1 >
                 <div className="inventory-items">
                         {
-                        products.map(product => < HomeInventory
+                        inventoryItems.slice(0, 6).map(product => < HomeInventory
                             key={product.id}
                             product={product}
                         />)

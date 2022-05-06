@@ -3,6 +3,7 @@ import "./Inventory.css"
 import useInventoryItems from '../Hooks/InventoryItems/useInventoryItems';
 import InventoryItems from '../InventoryItems/InventoryItems';
 import Footer from '../shered/Footer/Footer';
+import { Link } from 'react-router-dom';
 
 const Inventory = () => {
 
@@ -20,6 +21,7 @@ const Inventory = () => {
                         />)
                         }
                 </div>
+                 < Link to = "/additem"  className='add-item'>< button >ADD NEW</button></Link >
             </div>
             <Footer/>
         </>

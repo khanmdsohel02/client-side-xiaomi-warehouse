@@ -1,0 +1,10 @@
+.add-item{
+display: flex;
+justify-content: center;
+margin: 40px 0px 50px 0px;
+}
+.add-item  button{
+ width: 80%;
+  font-size: 25px;
+  border-radius: 35px !important;
+}
