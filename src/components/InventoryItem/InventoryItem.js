@@ -1,13 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './InventoryItems.css'
 
-const InventoryItems = ({inventoryItem}) => {
-  
+const InventoryItem = ({inventoryItem, handleDelete}) => {
+
     const { img, name, price, quantity, supplier, about } = inventoryItem;
-
     return (
-       <div className='single-item '>
+             <div className='single-item '>
             <img src={img} alt="" />
             <div className="info">
                 <h3>{name}</h3>
@@ -16,9 +13,9 @@ const InventoryItems = ({inventoryItem}) => {
                 <h5><strong>Supplier : </strong>{supplier}</h5>
                 <p>{about}</p> 
             </div>
-            < Link to = "/" >< button className='delete-btn'>DELETE</button></Link >
-        </div>
+          < button onClick={() =>handleDelete(inventoryItem._id)} className='delete-btn'>DELETE</button>
+            </div>
     );
 };
 
-export default InventoryItems;
+export default InventoryItem;

@@ -29,7 +29,7 @@ const AddItem = () => {
                  <input placeholder='Supplier Name' {...register("supplier")} />
                  <input placeholder='Image URL' {...register("img")} />
                  <textarea placeholder='About Product' {...register("about")} />
-                    <button>Add Item</button>
+                    <button>Add Product</button>
                 </form>
         </>
     );
