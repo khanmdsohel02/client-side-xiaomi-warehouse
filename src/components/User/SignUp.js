@@ -16,6 +16,7 @@ const SignUp = () => {
     handleConfirmPassword
   } = UseFirebase();
 
+
     return (
       <div className="main-width">
         <div className="Signup-form">

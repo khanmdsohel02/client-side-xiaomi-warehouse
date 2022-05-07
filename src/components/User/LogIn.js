@@ -3,10 +3,12 @@ import "./styleform.css"
 import {Link} from 'react-router-dom';
 import Footer from '../shered/Footer/Footer';
 import UseFirebase from '../Hooks/usafirebase/Usefirebase';
+import { Button } from 'react-bootstrap';
 
 const LogIn = () => {
 
-  const { signInWithGoogle, handleLogIn, signInWithFacebook } = UseFirebase();
+  const { signInWithGoogle, handleLogIn, signInWithFacebook, handlePasswordReset} = UseFirebase();
+
     return (
       <div className="main-width">
         <div className="login-form">
@@ -23,6 +25,7 @@ const LogIn = () => {
             </form>
             <h5>Are You New? <Link to="/signup"> SignUp</Link>
           </h5>
+           <Button onClick={handlePasswordReset} variant="link" className='ms-5 text-decoration-none'>Forget Password?</Button>
           <small>-------------------- OR -------------------- </small>
       <div className = 'social-btn' >
             <button onClick={signInWithGoogle}>Continue With Google</button>

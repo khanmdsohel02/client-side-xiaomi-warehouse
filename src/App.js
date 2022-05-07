@@ -12,12 +12,14 @@ import MyItems from "./components/MyItems/MyItems";
 import AddItem from "./components/AddItem/AddItem";
 import SingleItemUpdate from "./components/SingleItemUpdate/SingleItemUpdate";
 import NotFound from "./components/Notfound/NotFound";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
 
     <>
       <Navigation />
+      <Toaster/>
       <Routes>
        <Route path="/" element={<Home/>} />
         <Route path="/home" element={<Home/>} />

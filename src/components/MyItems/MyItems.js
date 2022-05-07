@@ -1,9 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import MyItem from '../MyItem/MyItem';
 import './MyItems.css'
+import UseFirebase from '../Hooks/usafirebase/Usefirebase';
+import axios from 'axios'
 
 const MyItems = () => {
-  const [newItems, setNewItems] = useState([]);
+    const [newItems, setNewItems] = useState([]);
+     const { user } = UseFirebase();
+    
+      useEffect(() => {
+               const email = user.email;
+          const getMyItems = async () => {
+              const url = `http://localhost:5000/myItems?email=${email}`;
+              const { data } = await axios.get(url);
+              setNewItems(data);
+          }
+        getMyItems()
+       }, [user])
 
    const handleDelete = id => {
         const proceed = window.confirm('Are you Sure?');
@@ -17,16 +30,15 @@ const MyItems = () => {
                     console.log(data);
                     const remaining = newItems.filter(item => item._id !== id);
                     setNewItems(remaining)
-            })
-        }
-    }
+            })}}
 
-    useEffect(() => {
-        fetch('http://localhost:5000/myItems')
-            .then(res => res.json())
-        .then(data => setNewItems(data))
-    }, [])
-
+    // useEffect(() => {
+    //          const email = user?.email;
+    //     fetch(`http://localhost:5000/myItems?email=${email}`)
+    //         .then(res => res.json())
+    //     .then(data => setNewItems(data))
+    // }, [user])
+  
     return (
         <div  className = "my-items" >
             <h1>My Items</h1>

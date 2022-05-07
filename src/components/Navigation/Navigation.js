@@ -21,9 +21,10 @@ const Navigation = () => {
       
         {
                 user?.uid?
-                  <NavDropdown  className = 'user-name'
+                  < NavDropdown 
+                  className = 'user-name'
                   title = {
-                    user ?.displayName && user.displayName
+                    user ?.displayName ?  user.displayName : "User Profile"
                   }
                 id = "collasible-nav-dropdown" >
         <NavDropdown.Item  className='text-center dropdown-item' as={Link} to="/manageInventories">MANAGE ITEM</NavDropdown.Item>
