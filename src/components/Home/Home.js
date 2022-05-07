@@ -8,18 +8,37 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import Footer from '../shered/Footer/Footer';
-import useInventoryItems from '../Hooks/InventoryItems/useInventoryItems';
+
 
 const Home = () => {
-    const [inventoryItems, setInventoryItems] = useInventoryItems();
-    
     const [reviews, setReviews] = useState([]);
+    const [pages, setPages] = useState(0);
+    const [page, setpage] = useState(0);
+    const [showProducts, setShowProducts] = useState(6);
+    const [inventoryItems, setInventoryItems] = useState([]);
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/products?page=${page}&showProducts=${showProducts}`)
+        .then(res =>res.json())
+       .then(data => setInventoryItems(data))
+    }, [page, showProducts])
+
     useEffect(() => {
         fetch('http://localhost:5000/review')
         .then(res => res.json())
         .then(data => setReviews(data))
     }, [])
     
+    useEffect(() => {
+        fetch('http://localhost:5000/productCount')
+            .then(res => res.json())
+            .then(data => {
+                const count = data.count;
+                const totalPage = Math.ceil(count / 6);
+                setPages(totalPage)
+        })
+    }, [])
+
     return (
         <>
             <Banner />
@@ -27,12 +46,21 @@ const Home = () => {
                 <h1><span> Inventory </span> Items</h1 >
                 <div className="inventory-items">
                         {
-                        inventoryItems.slice(0, 6).map(product => < HomeInventory
-                            key={product.id}
+                        inventoryItems.map(product => < HomeInventory
+                            key={product._id}
                             product={product}
                         />)
-                        }
+                    }  
                 </div>
+                    <div className = 'pagination' >
+                        {
+                        [...Array(pages).keys()].map(number => <button
+                            className ={page=== number ? 'btn-select': ' '}
+                            onClick={()=>setpage(number)}
+                        >{number + 1}</button>)
+                    }
+                    </div>
+             
                < Link to = "/manageinventories"  className='manage-inventories'> < button > Manage Inventories </button></Link >
             </div>
             <div className='count'>
