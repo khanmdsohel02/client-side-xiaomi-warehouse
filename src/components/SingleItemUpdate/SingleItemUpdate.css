@@ -6,6 +6,13 @@
     justify-content: space-between;
     margin: 10px;
 }
+.update-section .img{
+    width: 80%;
+    margin: auto;
+}
+.update-section img{
+    width: 100%;
+}
 .product-info{
     padding-right: 20px;
 }
@@ -20,4 +27,20 @@
 .product-info p{
     text-align: justify;
     font-size: 20px;
+}
+.stock a{
+  text-decoration: none;
+}
+.stock form {
+    width: 40%;
+    display: flex !important;
+    justify-content: center !important;
+    margin: 20px auto;
+}
+.manage-btn{
+  display: flex;
+   align-items: center;
+   justify-content: center;
+ text-decoration: none;
+ margin-bottom: 25px;
 }

@@ -61,7 +61,7 @@ const Home = () => {
                     }
                     </div>
              
-               < Link to = "/manageinventories"  className='manage-inventories'> < button > Manage Inventories </button></Link >
+               < Link to = "/manageinventories"  className='manage-btn'> < button > Manage Inventories </button></Link >
             </div>
             <div className='count'>
                 <div className='counter'>
@@ -82,8 +82,8 @@ const Home = () => {
                 </div>
                 
             </div>
-            <div className='review-bg'>
-               <h1 className='title'>Dealer Review</h1>
+            <div className='review'>
+               <h1 className='title text-center text-danger'>Dealer Review</h1>
                 < Swiper  modules={[Pagination]}
       spaceBetween={40}
       slidesPerView={1}

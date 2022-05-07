@@ -1,12 +1,12 @@
 import React from 'react';
 import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 
-const InventoryItem = ({inventoryItem, handleDelete}) => {
+const MyItem = ({item, handleDelete}) => {
 
-    const { img, name, price, quantity, supplier, about } = inventoryItem;
+    const { img, name, price, quantity, supplier, about } = item;
     return (
-      <>
-      <Card className="card-item">
+        <>
+            <Card  className = 'card-item' >
         <Card.Img variant="top" src={img} />
         <Card.Title ><h3>{name}</h3></Card.Title>
      <ListGroup className="list-group-flush">
@@ -19,10 +19,14 @@ const InventoryItem = ({inventoryItem, handleDelete}) => {
      <p>{about}</p> 
     </Card.Text>
   </Card.Body>
- < button onClick={() =>handleDelete(inventoryItem._id)} className='delete-btn'>DELETE</button>
-  </Card>
-  </>
+  <Card.Body>
+            <div className='update-btn'>
+                  < button  onClick={() =>handleDelete(item._id)}>DELETE</button> 
+            </div>              
+  </Card.Body>
+</Card>
+        </>
     );
 };
 
-export default InventoryItem;
+export default MyItem;

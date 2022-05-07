@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <div className='footer'>
             <div className="footer1">
-                <div>
+                <div >
                     <img src={'https://i.ibb.co/fG4hsZK/logo.png'} alt="" />
                     <h4 className='ps-4'>Payment Methods</h4>
                     <img src={"https://i.ibb.co/cwypqRg/methods.png"} alt=""/>
@@ -22,9 +22,9 @@ const Footer = () => {
                 </div>
                 <div className='time'>
                     <h4>Opening Hours</h4>
-                    <p><strong>Sunday - Thursday :</strong>   24 Hour</p>
-                    <p><strong>Friday :</strong> close</p>
-                    < p > <strong>Saturday :</strong>  10.00 am to 05.00 pm</p >
+                    <p className='text-white'><strong className='text-white'>Sunday - Thursday :</strong>   24 Hour</p>
+                    <p className='text-white'><strong className='text-white'>Friday :</strong> close</p>
+                    < p className='text-white' > <strong className='text-white'>Saturday :</strong>  10.00 am to 05.00 pm</p >
                 </div>
             </div>
             <p className='copy-right'>Copyright © 2022 xiaomi-warehouse.com</p>

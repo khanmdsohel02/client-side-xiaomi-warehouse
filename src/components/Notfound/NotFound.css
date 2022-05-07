@@ -1,0 +1,14 @@
+.not-found{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.not-found img{
+    margin-bottom: 15px;
+}
+button{
+    background-color: coral;
+    padding: 15px 20px;
+    border-radius: 15px;
+}

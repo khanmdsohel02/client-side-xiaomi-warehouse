@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import Footer from '../shered/Footer/Footer';
 import './SingleItemUpdate.css'
 
 const SingleItemUpdate = () => {
     const { id } = useParams();
-
     const [product, setProduct] = useState([]);
+    const [decreaseQuantity, setDecreaseQuantity] = useState(0)
 console.log(product);
     useEffect(() => {
         const url = `http://localhost:5000/product/${id}`
@@ -13,11 +14,17 @@ console.log(product);
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [])
+    
+    // const handleDecreaseQuantity = () => {
+    //     const deliveryQuantity = 1;
+    //     const newQuantity = product.quantity - deliveryQuantity
+    //     setDecreaseQuantity(newQuantity);
+    // }
     return (
         <>
-            <h1 className='my-5 '>Update This Item</h1>
+            <h1 className='my-5 text-center text-danger'>Update This Item</h1>
              <div className='update-section'>
-                <div>
+                <div className='img'>
                     <img src={product.img} alt=""/>
             </div>
                 <div className="product-info">
@@ -36,9 +43,11 @@ console.log(product);
                            name = 'stock'
                              placeholder = 'Stock Amount Write Here'
                              required />
-                        <button>Delivered</button>
+                        <button>Restock</button>
                 </form>
             </div>
+            < Link to="/manageinventories" className='manage-btn'> < button > Manage Inventories </button></Link >
+            <Footer/>
         </>
     );
 };

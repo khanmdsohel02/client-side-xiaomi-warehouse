@@ -8,3 +8,6 @@ margin: 40px 0px 50px 0px;
   font-size: 25px;
   border-radius: 35px !important;
 }
+.items a {
+  text-decoration: none !important;
+}

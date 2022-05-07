@@ -6,7 +6,7 @@ const AddItem = () => {
      const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data);
-        const url = 'http://localhost:5000/product';
+        const url = 'http://localhost:5000/product' && 'http://localhost:5000/myItems';
         fetch(url, {
             method: 'POST',
             headers: {

@@ -1,39 +1,28 @@
-.single-item{
-     border:  3px solid coral;
-     border-radius: 15px;
+card{
+    border-radius: 10px;
      position: relative;
-     margin:20px;
-
 }
-.single-item img{
-    width: 100%;
-    height: 300px;
-    margin: 0px auto;
-    padding: 15px;
+.card-item .img{
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    padding: 10px;
 }
-.info{
-    margin-top: 15px;
-    margin-bottom: 20px;
-    padding: 30px 20px;
-    color: chocolate;
+.card-item h3{
+color: chocolate;
+padding: 10px 15px;
 }
-.info p{
-    font-size: 20px;
+.card-item h5{
+    color: coral;
+}
+.card-item p{
     text-align: justify;
-    font-weight: 500;
+    font-size: 18px;
     color: chocolate;
-    padding-top: 10px;
+    margin-bottom: 20px !important;
 }
-.update-btn, .delete-btn{
+ .update-btn button{
     width: 100%;
-    background-color: coral;
-    color: white;
-    border-radius: 0px 0px 11px 11px !important;
-    border: none;
     position: absolute;
-    bottom: 0;
-    padding: 10px ;
-}
-.update-btn:hover{
-    background-color: chocolate;
+    bottom: 0px;
 }

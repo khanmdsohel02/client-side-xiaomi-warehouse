@@ -11,6 +11,7 @@ import RequireAuth from "./components/RequireAuth/RequireAuth"
 import MyItems from "./components/MyItems/MyItems";
 import AddItem from "./components/AddItem/AddItem";
 import SingleItemUpdate from "./components/SingleItemUpdate/SingleItemUpdate";
+import NotFound from "./components/Notfound/NotFound";
 
 function App() {
   return (
@@ -32,7 +33,13 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/additem" element={<AddItem/>} />
         <Route path="/myitems" element={<MyItems />} />
-        <Route path="/detailupdate/:id" element={<SingleItemUpdate/>} />
+        <Route path="/detailupdate/:id" element={
+          <RequireAuth>
+            <SingleItemUpdate/>
+          </RequireAuth>
+
+        } />
+        <Route path="*" element={<NotFound/>} />
         
       </Routes>
     </>
