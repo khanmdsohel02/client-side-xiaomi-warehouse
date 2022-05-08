@@ -18,19 +18,19 @@ const Home = () => {
     const [inventoryItems, setInventoryItems] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products?page=${page}&showProducts=${showProducts}`)
+        fetch(`https://sleepy-mesa-71847.herokuapp.com/products?page=${page}&showProducts=${showProducts}`)
         .then(res =>res.json())
        .then(data => setInventoryItems(data))
     }, [page, showProducts])
 
     useEffect(() => {
-        fetch('http://localhost:5000/review')
+        fetch('https://sleepy-mesa-71847.herokuapp.com/review')
         .then(res => res.json())
         .then(data => setReviews(data))
     }, [])
     
     useEffect(() => {
-        fetch('http://localhost:5000/productCount')
+        fetch('https://sleepy-mesa-71847.herokuapp.com/productCount')
             .then(res => res.json())
             .then(data => {
                 const count = data.count;

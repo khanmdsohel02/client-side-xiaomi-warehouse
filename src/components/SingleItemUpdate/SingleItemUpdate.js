@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
 import { Link, useParams } from 'react-router-dom';
 import Footer from '../shered/Footer/Footer';
 import './SingleItemUpdate.css'
@@ -6,28 +7,41 @@ import './SingleItemUpdate.css'
 const SingleItemUpdate = () => {
     const { id } = useParams();
     const [product, setProduct] = useState([]);
-    const [newQuantity, setNewQuantity] = useState();
-
-console.log(newQuantity);
+    const [newStock, setNewStock] = useState(product.quantity)
     
-console.log(product);
     useEffect(() => {
-        const url = `http://localhost:5000/product/${id}`
+        const url = `https://sleepy-mesa-71847.herokuapp.com/product/${id}`
         fetch(url)
             .then(res => res.json())
-            .then(data => {
-                setProduct(data)
-                setNewQuantity(data.quantity)
-            })
+            .then(data => setProduct(data))
     }, [])
-    const handleStock = (event) => {
+
+   const handleStock = event => {
         event.preventDefault()
-        const stockAmount = event.target.stock.value;
-        const newStock = parseInt(newQuantity) + parseInt(stockAmount);
-        setNewQuantity(newStock)
-        event.target.stock.value = " ";
+       const quantity = event.target.stock.value
+       const newQuantity = parseInt(quantity) + parseInt(product.quantity)
+      setNewStock(newQuantity);
+      console.log(newQuantity);
         
-    }
+       const newAddedQuantity = { quantity }
+           const url = `http://localhost:5000/product/${id}`
+ fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type':'application/json'
+            },
+            body: JSON.stringify(newAddedQuantity)
+        })
+            .then(res => res.json())
+            .then(result => {
+                console.log(result);
+                const data = result;
+                if (data) {
+                    toast.success("Successfully Update ", { id: "success" });
+                    event.target.reset()
+                }
+            })
+   }
 
     return (
         <>
@@ -39,7 +53,7 @@ console.log(product);
                 <div className="product-info">
                     <h2>{product.name}</h2>
                     <h5><strong>Price: </strong> {product.price} Taka</h5>
-                    <h5><strong>Quantity: </strong> {product.quantity} Pis</h5>
+                    <h5><strong>Quantity: </strong> {newStock} Pis</h5>
                     <h5><strong>Supplier: </strong> {product.supplier}</h5>
                     <h5><strong>Sold: </strong>0 Pis</h5>
                     <p>{product.about?.slice(0, 400)}</p>
@@ -47,13 +61,13 @@ console.log(product);
                 </div>
             </div>
             <div className="stock">
-                <form  onSubmit = {handleStock} >
+                <form  onSubmit = {handleStock}>
                         < input type = "number"
                            name = 'stock'
                              placeholder = 'Stock Amount Write Here'
                         required
                     className='stock-input'/>
-                   <input type="submit" className='stock-btn' value="Restock" />
+                   <input type="submit" className='stock-btn' value="ReStock" />
                 </form>
             </div>
             < Link to="/manageinventories" className='manage-btn'> < button > Manage Inventories </button></Link >

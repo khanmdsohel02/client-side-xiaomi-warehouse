@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import MyItem from '../MyItem/MyItem';
 import './MyItems.css'
-import UseFirebase from '../Hooks/usafirebase/Usefirebase';
 import axios from 'axios'
+import UseFirebase from '../Hooks/usafirebase/Usefirebase';
 
 const MyItems = () => {
     const [newItems, setNewItems] = useState([]);
-     const { user } = UseFirebase();
+    const { user } = UseFirebase();
+   
     
-      useEffect(() => {
-               const email = user.email;
+    useEffect(() => {
+           const email = user.email;
           const getMyItems = async () => {
               const url = `http://localhost:5000/myItems?email=${email}`;
               const { data } = await axios.get(url);
@@ -21,7 +22,7 @@ const MyItems = () => {
    const handleDelete = id => {
         const proceed = window.confirm('Are you Sure?');
         if (proceed) {
-            const url = `http://localhost:5000/myItem/${id}`;
+            const url = `http://localhost:5000/product/${id}`;
             fetch(url, {
                 method:'DELETE'
             })
@@ -32,12 +33,6 @@ const MyItems = () => {
                     setNewItems(remaining)
             })}}
 
-    // useEffect(() => {
-    //          const email = user?.email;
-    //     fetch(`http://localhost:5000/myItems?email=${email}`)
-    //         .then(res => res.json())
-    //     .then(data => setNewItems(data))
-    // }, [user])
   
     return (
         <div  className = "my-items" >
