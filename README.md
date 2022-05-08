@@ -2,7 +2,7 @@
 
 ##  Live link : https://xiaomi-warehouse.web.app/
 
-# This website is basically warehouse based i.e. warehousing. Here various products of Shaomi company are warehoused on mobile router TVs and supplied for sale to various retailers.
+# This website is basically warehouse based i.e. warehousing. Here various products of Xiaomi company are warehoused on mobile router TVs and supplied for sale to various retailers.
 
 ## What has been done in the project 
 
