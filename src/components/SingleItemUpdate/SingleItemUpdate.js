@@ -6,20 +6,29 @@ import './SingleItemUpdate.css'
 const SingleItemUpdate = () => {
     const { id } = useParams();
     const [product, setProduct] = useState([]);
-    const [decreaseQuantity, setDecreaseQuantity] = useState(0)
+    const [newQuantity, setNewQuantity] = useState();
+
+console.log(newQuantity);
+    
 console.log(product);
     useEffect(() => {
         const url = `http://localhost:5000/product/${id}`
         fetch(url)
             .then(res => res.json())
-            .then(data => setProduct(data))
+            .then(data => {
+                setProduct(data)
+                setNewQuantity(data.quantity)
+            })
     }, [])
-    
-    // const handleDecreaseQuantity = () => {
-    //     const deliveryQuantity = 1;
-    //     const newQuantity = product.quantity - deliveryQuantity
-    //     setDecreaseQuantity(newQuantity);
-    // }
+    const handleStock = (event) => {
+        event.preventDefault()
+        const stockAmount = event.target.stock.value;
+        const newStock = parseInt(newQuantity) + parseInt(stockAmount);
+        setNewQuantity(newStock)
+        event.target.stock.value = " ";
+        
+    }
+
     return (
         <>
             <h1 className='my-5 text-center text-danger'>Update This Item</h1>
@@ -38,12 +47,13 @@ console.log(product);
                 </div>
             </div>
             <div className="stock">
-                <form>
+                <form  onSubmit = {handleStock} >
                         < input type = "number"
                            name = 'stock'
                              placeholder = 'Stock Amount Write Here'
-                             required />
-                        <button>Restock</button>
+                        required
+                    className='stock-input'/>
+                   <input type="submit" className='stock-btn' value="Restock" />
                 </form>
             </div>
             < Link to="/manageinventories" className='manage-btn'> < button > Manage Inventories </button></Link >

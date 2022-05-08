@@ -28,14 +28,24 @@
     text-align: justify;
     font-size: 20px;
 }
-.stock a{
-  text-decoration: none;
-}
 .stock form {
     width: 40%;
     display: flex !important;
     justify-content: center !important;
     margin: 20px auto;
+}
+.stock-input{
+    padding: 15px;
+}
+.stock-btn{
+padding: 10px 15px;
+background-color: coral;
+color: white;
+font-weight: 600;
+}
+.stock-btn:hover{
+    background-color: chocolate;
+    font-weight: 700;
 }
 .manage-btn{
   display: flex;

@@ -49,7 +49,8 @@ const Home = () => {
                         inventoryItems.map(product => < HomeInventory
                             key={product._id}
                             product={product}
-                        />)
+                        />
+                        )  
                     }  
                 </div>
                     <div className = 'pagination' >
