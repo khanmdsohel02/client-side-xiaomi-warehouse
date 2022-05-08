@@ -7,13 +7,17 @@ import './SingleItemUpdate.css'
 const SingleItemUpdate = () => {
     const { id } = useParams();
     const [product, setProduct] = useState([]);
-    const [newStock, setNewStock] = useState(product.quantity)
+    const [newStock, setNewStock] = useState([product.quantity])
     
+
+        
     useEffect(() => {
         const url = `https://sleepy-mesa-71847.herokuapp.com/product/${id}`
         fetch(url)
             .then(res => res.json())
-            .then(data => setProduct(data))
+            .then(data => {
+                setProduct(data)
+            })
     }, [])
 
    const handleStock = event => {
@@ -24,7 +28,7 @@ const SingleItemUpdate = () => {
       console.log(newQuantity);
         
        const newAddedQuantity = { quantity }
-           const url = `http://localhost:5000/product/${id}`
+           const url = `https://sleepy-mesa-71847.herokuapp.com/product/${id}`
  fetch(url, {
             method: 'PUT',
             headers: {

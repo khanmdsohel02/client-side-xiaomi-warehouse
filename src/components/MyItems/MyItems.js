@@ -11,18 +11,20 @@ const MyItems = () => {
     
     useEffect(() => {
            const email = user.email;
-          const getMyItems = async () => {
-              const url = `http://localhost:5000/myItems?email=${email}`;
+        if (email) {
+              const getMyItems = async () => {
+              const url = `https://sleepy-mesa-71847.herokuapp.com/myItems?email=${email}`;
               const { data } = await axios.get(url);
               setNewItems(data);
           }
         getMyItems()
+         }
        }, [user])
 
    const handleDelete = id => {
         const proceed = window.confirm('Are you Sure?');
         if (proceed) {
-            const url = `http://localhost:5000/product/${id}`;
+            const url = `https://sleepy-mesa-71847.herokuapp.com/product/${id}`;
             fetch(url, {
                 method:'DELETE'
             })
